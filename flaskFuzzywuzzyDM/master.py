@@ -6,7 +6,9 @@ from doublemetaphone import doublemetaphone as dm
 def homophone(str1, str2):
     print(dm(str1))
     print(dm(str2))
-    if fuzz.ratio(dm(str1), dm(str2)) == 100:
+    if fuzz.ratio(dm(str1)[0], dm(str2)[0]) == 100:
+        return 1
+    elif fuzz.ratio(dm(str1)[1], dm(str2)[1]) == 100 and dm(str1)[1] != '' and dm(str2)[1] != '':
         return 1
 
 
