@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <h1>Results:</h1>
+    <p><strong>String1: </strong>{{ value1 }}</p>
+    <p><strong>String2: </strong>{{ value2 }}</p>
+    {% if ptr == 1 %}
+        <p><strong>Sounds same?: </strong>Yes</p>
+        <p><strong>fuzz.ratio after dm: </strong>{{ fuzzyDM }}</p>
+        <p><strong>fuzz.ratio before dm: </strong>{{ fuzzyNoDM }}</p>
+    {% else %}
+        <p><strong>Sounds same?: </strong>No</p>
+        <p><strong>fuzz.ratio after dm: </strong>{{ fuzzyDM }}</p>
+        <p><strong>fuzz.ratio before dm: </strong>{{ fuzzyNoDM }}</p>
+    {% endif %}
+
+</head>
+<body>
+
+</body>
+</html>
